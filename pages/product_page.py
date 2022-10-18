@@ -11,11 +11,10 @@ class ProductPage(BasePage):
         link = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_FORM)
         link.click()
     
-    def exclude_name_and_price_product_before(self):
+    def exclude_names_and_prices_product(self):
         self.name_before = self.browser.find_element(*ProductPageLocators.NAME_PRODUCT_BEFORE).text
         self.price_before = self.browser.find_element(*ProductPageLocators.PRICE_PRODUCT_BEFORE).text
         
-    def exclude_name_and_price_product_after(self):
         self.name_after = self.browser.find_element(*ProductPageLocators.NAME_PRODUCT_AFTER).text
         self.price_after = self.browser.find_element(*ProductPageLocators.PRICE_PRODUCT_AFTER).text
 
@@ -24,11 +23,10 @@ class ProductPage(BasePage):
             'Names of product before and after are not equal'
 
     def should_be_equel_prices_product(self):
-        # print(self.price_before)
-        # print(self.price_after)
         assert self.price_before == self.price_after, \
             'Prices of product before and after are not equal'
 
     def should_be_equel_names_and_prices_of_product(self):
+        self.exclude_names_and_prices_product()
         self.should_be_equel_names_product()
         self.should_be_equel_prices_product()
