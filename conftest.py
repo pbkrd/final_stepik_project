@@ -11,6 +11,7 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="function")
 def browser():
     browser = webdriver.Chrome()
+    browser.implicitly_wait(5)
     yield browser
     # time.sleep(30)
     browser.quit()
