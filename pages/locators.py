@@ -15,3 +15,5 @@ class ProductPageLocators():
     PRICE_PRODUCT_BEFORE = (By.CSS_SELECTOR, ".product_main .price_color")
     NAME_PRODUCT_AFTER = (By.CSS_SELECTOR, ".alert:nth-child(1) strong")
     PRICE_PRODUCT_AFTER = (By.CSS_SELECTOR, ".alert:nth-child(3) strong")
+
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")

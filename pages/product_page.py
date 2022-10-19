@@ -31,3 +31,8 @@ class ProductPage(BasePage):
         self.exclude_names_and_prices_product()
         self.should_be_equel_names_product()
         self.should_be_equel_prices_product()
+
+    def should_disappear_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), 'Sucsess messege isn`t disappeared'
+
+
