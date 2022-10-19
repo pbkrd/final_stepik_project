@@ -33,6 +33,15 @@ class ProductPage(BasePage):
         self.should_be_equel_prices_product()
 
     def should_disappear_success_message(self):
-        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), 'Sucsess messege isn`t disappeared'
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            'Sucsess messege isn`t disappeared'
+        
+    def should_be_not_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            'There is success message, but should not be'
+
+    def should_be_not_success_message_after_adding_product(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            'There is success message after adding product to basket, but should not be'
 
 
