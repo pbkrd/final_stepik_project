@@ -8,6 +8,7 @@ class ProductPage(BasePage):
             "Adding basket form is not presented"
 
     def go_to_add_to_basket_form(self):
+        self.should_be_add_to_basket_form()
         link = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_FORM)
         link.click()
     
