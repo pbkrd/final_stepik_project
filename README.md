@@ -1,8 +1,8 @@
-#Проект курса [Автоматизация тестирования с помощью Selenium и Python](https://stepik.org/course/575/info) 
+# Проект курса [Автоматизация тестирования с помощью Selenium и Python](https://stepik.org/course/575/info) 
 
 Выполнено 17.10.22
 ========================
-###Приобретенные навыки:
+### Приобретенные навыки:
 * Selenium
 * unittest
 * PyTest
